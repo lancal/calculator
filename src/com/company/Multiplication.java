@@ -7,6 +7,7 @@ public class Multiplication extends  Operation{
 
         super( number1, number2, '*');
         this.mul = number1 * number2;
+        super.result = this.mul;
 
     }
 }

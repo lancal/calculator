@@ -81,6 +81,14 @@ public class Main {
                 sub.show();
             }
 
+            if (optionValidate == 3) {
+
+                int number1 = number("a");
+                int number2 = number("b");
+                Multiplication mul = new Multiplication(number1,number2);
+                mul.show();
+            }
+
             if(optionValidate == 6 ) {
                 flag = false;
             }
