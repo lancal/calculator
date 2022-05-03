@@ -8,6 +8,7 @@ public class Division extends Operation{
         super( number1, number2, '/');
         if(number2 == 0) System.out.println("Can't be Zero !");
         else this.div = number1 / number2;
+        super.result = this.div;
 
     }
 }

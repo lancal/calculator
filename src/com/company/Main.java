@@ -89,6 +89,14 @@ public class Main {
                 mul.show();
             }
 
+            if (optionValidate == 4) {
+
+                int number1 = number("a");
+                int number2 = number("b");
+                Division div = new Division(number1,number2);
+                div.show();
+            }
+
             if(optionValidate == 6 ) {
                 flag = false;
             }
