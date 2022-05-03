@@ -48,6 +48,14 @@ public class Main {
         System.out.print("Option: ");
         return scan.nextInt();
     }
+
+    public static int number(){
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Number: ");
+        return scan.nextInt();
+    }
     public static void main(String[] args) {
 
         //System.out.println("Hello World!");
@@ -58,6 +66,14 @@ public class Main {
 
             int option = menuOption();
             int optionValidate = optionValidated(option);
+
+            if (option == 1) {
+
+                int number1 = number();
+                int number2 = number();
+                Addition add = new Addition(number1,number2);
+                add.show();
+            }
 
             if(option == 6 ) {
                 flag = false;
