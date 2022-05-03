@@ -1,13 +1,13 @@
 package com.company;
 
 public class Operation {
-    int number1;
-    int number2;
+    double number1;
+    double number2;
 
-    int result;
+    double result;
     char operation;
 
-    public Operation(int number1, int number2,  char operation){
+    public Operation(double number1, double number2,  char operation){
 
         this.number1 = number1;
         this.number2 = number2;

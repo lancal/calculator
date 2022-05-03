@@ -50,12 +50,12 @@ public class Main {
         return scan.nextInt();
     }
 
-    public static int number(String number){
+    public static double number(String number){
 
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Number " + number + ": ");
-        return scan.nextInt();
+        return scan.nextDouble();
     }
     public static void main(String[] args) {
 
@@ -68,8 +68,8 @@ public class Main {
 
             if (optionValidate == 1) {
 
-                int number1 = number("a");
-                int number2 = number("b");
+                double number1 = number("a");
+                double number2 = number("b");
                 //Initialization object
                 Addition add = new Addition(number1,number2);
                 add.show();
@@ -77,24 +77,24 @@ public class Main {
 
             if (optionValidate == 2) {
 
-                int number1 = number("a");
-                int number2 = number("b");
+                double number1 = number("a");
+                double number2 = number("b");
                 Subtraction sub = new Subtraction(number1,number2);
                 sub.show();
             }
 
             if (optionValidate == 3) {
 
-                int number1 = number("a");
-                int number2 = number("b");
+                double number1 = number("a");
+                double number2 = number("b");
                 Multiplication mul = new Multiplication(number1,number2);
                 mul.show();
             }
 
             if (optionValidate == 4) {
 
-                int number1 = number("a");
-                int number2 = number("b");
+                double number1 = number("a");
+                double number2 = number("b");
                 Division div = new Division(number1,number2);
                 div.show();
             }
@@ -102,19 +102,19 @@ public class Main {
             if (optionValidate == 5) {
 
                 // number A
-                int number1 = number("a");
+                double number1 = number("a");
 
                 // number B
-                int number2 = number("b");
+                double number2 = number("b");
 
                 // number C
-                int number3 = number("c");
+                double number3 = number("c");
 
                 // -B
-                int numberBMinus = number2 * (-1);
+                double numberBMinus = number2 * -1;
 
                 // 2A
-                int denominator = number1 * 2;
+                double denominator = number1 * 2;
 
                 // AC
                 Multiplication mulAC = new Multiplication(number1,number3);
@@ -129,7 +129,7 @@ public class Main {
                 Subtraction numberBB4AC = new Subtraction(numberBB.result,mul4AC.result);
 
                 // square root
-                int squareRoot = (int) Math.sqrt((double) numberBB4AC.result);
+                double squareRoot = Math.sqrt( numberBB4AC.result);
 
                 // -B + squareRoot
                 Addition numeratorPositive = new Addition(numberBMinus,squareRoot);
