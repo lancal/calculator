@@ -49,16 +49,14 @@ public class Main {
         return scan.nextInt();
     }
 
-    public static int number(){
+    public static int number(String number){
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Number: ");
+        System.out.print("Number " + number + ": ");
         return scan.nextInt();
     }
     public static void main(String[] args) {
-
-        //System.out.println("Hello World!");
 
         boolean flag = true;
 
@@ -69,8 +67,8 @@ public class Main {
 
             if (optionValidate == 1) {
 
-                int number1 = number();
-                int number2 = number();
+                int number1 = number("a");
+                int number2 = number("b");
                 Addition add = new Addition(number1,number2);
                 add.show();
             }
