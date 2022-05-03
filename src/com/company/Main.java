@@ -1,5 +1,6 @@
 package com.company;
 import java.util.Scanner;
+import java.lang.Math;
 import java.util.regex.Pattern;
 
 public class Main {
@@ -69,6 +70,7 @@ public class Main {
 
                 int number1 = number("a");
                 int number2 = number("b");
+                //Initialization object
                 Addition add = new Addition(number1,number2);
                 add.show();
             }
@@ -95,6 +97,57 @@ public class Main {
                 int number2 = number("b");
                 Division div = new Division(number1,number2);
                 div.show();
+            }
+
+            if (optionValidate == 5) {
+
+                // number A
+                int number1 = number("a");
+
+                // number B
+                int number2 = number("b");
+
+                // number C
+                int number3 = number("c");
+
+                // -B
+                int numberBMinus = number2 * (-1);
+
+                // 2A
+                int denominator = number1 * 2;
+
+                // AC
+                Multiplication mulAC = new Multiplication(number1,number3);
+
+                //4AC
+                Multiplication mul4AC = new Multiplication(4,mulAC.result);
+
+                // B * B
+                Multiplication numberBB = new Multiplication(number2,number2);
+
+                // B * B - 4AC
+                Subtraction numberBB4AC = new Subtraction(numberBB.result,mul4AC.result);
+
+                // square root
+                int squareRoot = (int) Math.sqrt((double) numberBB4AC.result);
+
+                // -B + squareRoot
+                Addition numeratorPositive = new Addition(numberBMinus,squareRoot);
+
+                // -B - squareRoot
+                Subtraction numeratorNegative = new Subtraction(numberBMinus,squareRoot);
+
+                // ( -B + squareRoot ) / 2A
+                Division numberX = new Division(numeratorPositive.result,denominator);
+
+                // ( -B - squareRoot ) / 2A
+                Division numberX2 = new Division(numeratorNegative.result,denominator);
+
+                System.out.println("X1: " + numberX.result);
+                System.out.println("X2: " + numberX2.result);
+
+
+
             }
 
             if(optionValidate == 6 ) {
