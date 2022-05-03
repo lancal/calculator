@@ -77,8 +77,8 @@ public class Main {
 
                 int number1 = number("a");
                 int number2 = number("b");
-                Subtraction add = new Subtraction(number1,number2);
-                add.show();
+                Subtraction sub = new Subtraction(number1,number2);
+                sub.show();
             }
 
             if(optionValidate == 6 ) {
