@@ -67,7 +67,7 @@ public class Main {
             int option = menuOption();
             int optionValidate = optionValidated(option);
 
-            if (option == 1) {
+            if (optionValidate == 1) {
 
                 int number1 = number();
                 int number2 = number();
@@ -75,7 +75,7 @@ public class Main {
                 add.show();
             }
 
-            if(option == 6 ) {
+            if(optionValidate == 6 ) {
                 flag = false;
             }
 
