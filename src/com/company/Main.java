@@ -73,6 +73,14 @@ public class Main {
                 add.show();
             }
 
+            if (optionValidate == 2) {
+
+                int number1 = number("a");
+                int number2 = number("b");
+                Subtraction add = new Subtraction(number1,number2);
+                add.show();
+            }
+
             if(optionValidate == 6 ) {
                 flag = false;
             }
